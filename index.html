@@ -1,227 +1,373 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>4 Días Gym - Alejandra</title>
 <meta name="description" content="Plan de entrenamiento de 4 días de Alejandra.">
+
 <style>
 :root {
-  --bg:#f5f6f8; --card:#ffffff; --text:#20242a; --muted:#69717d;
-  --accent:#5b3fd3; --line:#e4e7ec;
+  --bg:#f5f6f8;
+  --card:#ffffff;
+  --text:#20242a;
+  --muted:#69717d;
+  --accent:#5b3fd3;
+  --line:#e4e7ec;
 }
+
 * { box-sizing:border-box; }
+
 html { scroll-behavior:smooth; }
+
 body {
-  margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--bg); color:var(--text); line-height:1.65;
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
 }
+
 header {
-  background:linear-gradient(135deg,#171923,#3b2a75); color:white;
-  padding:48px 20px 32px; text-align:center;
+  background:linear-gradient(135deg,#171923,#3b2a75);
+  color:white;
+  padding:48px 20px 32px;
+  text-align:center;
 }
-header h1 { margin:0 0 10px; font-size:clamp(2rem,6vw,3.5rem); }
-header p { margin:0; opacity:.85; }
+
+header h1 {
+  margin:0 0 10px;
+  font-size:clamp(2rem,6vw,3.5rem);
+}
+
+header p {
+  margin:0;
+  opacity:.85;
+}
+
 nav {
-  position:sticky; top:0; z-index:10; background:white; border-bottom:1px solid var(--line);
-  display:flex; gap:8px; overflow:auto; padding:10px 14px;
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:white;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  gap:8px;
+  overflow:auto;
+  padding:10px 14px;
 }
+
 nav a {
-  flex:0 0 auto; text-decoration:none; color:var(--text); background:#f0f1f4;
-  padding:7px 11px; border-radius:999px; font-size:.9rem;
+  flex:0 0 auto;
+  text-decoration:none;
+  color:var(--text);
+  background:#f0f1f4;
+  padding:7px 11px;
+  border-radius:999px;
+  font-size:.9rem;
 }
-main { max-width:980px; margin:28px auto; padding:0 16px 50px; }
+
+main {
+  max-width:980px;
+  margin:28px auto;
+  padding:0 16px 50px;
+}
+
 .page {
-  background:var(--card); border:1px solid var(--line); border-radius:18px;
-  padding:30px; margin:0 0 24px; box-shadow:0 6px 24px rgba(0,0,0,.05);
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:30px;
+  margin:0 0 24px;
+  box-shadow:0 6px 24px rgba(0,0,0,.05);
 }
-.page-number { color:var(--accent); font-size:.78rem; font-weight:700; letter-spacing:.08em; }
-h2 { margin:5px 0 22px; font-size:clamp(1.5rem,4vw,2.2rem); }
-.content p { margin:0 0 14px; white-space:normal; }
-.content a { color:var(--accent); overflow-wrap:anywhere; }
+
+.page-number {
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+h2 {
+  margin:5px 0 22px;
+  font-size:clamp(1.5rem,4vw,2.2rem);
+}
+
+.content p {
+  margin:0 0 14px;
+  white-space:normal;
+}
+
+.content a {
+  color:var(--accent);
+  overflow-wrap:anywhere;
+}
+
 .images {
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:14px; margin-top:22px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
+  margin-top:22px;
 }
-.image-slot {
-  min-height:150px; border:2px dashed #c9cdd5; border-radius:14px;
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-  padding:16px; text-align:center; background:#fafbfc;
+
+.exercise-image img {
+  width:100%;
+  max-height:260px;
+  object-fit:contain;
+  margin-top:12px;
+  border-radius:10px;
 }
-.image-slot strong { margin-bottom:8px; }
-.image-slot code { color:var(--muted); font-size:.72rem; overflow-wrap:anywhere; }
-.image-slot img { width:100%; max-height:260px; object-fit:contain; margin-top:12px; border-radius:10px; }
-footer { text-align:center; color:var(--muted); padding:20px; font-size:.85rem; }
+
+footer {
+  text-align:center;
+  color:var(--muted);
+  padding:20px;
+  font-size:.85rem;
+}
+
 @media (max-width:600px) {
-  .page { padding:20px; border-radius:14px; }
-  main { padding:0 10px 30px; margin-top:16px; }
+  .page {
+    padding:20px;
+    border-radius:14px;
+  }
+
+  main {
+    padding:0 10px 30px;
+    margin-top:16px;
+  }
 }
 </style>
+
 </head>
+
 <body>
+
 <header>
   <h1>4 DÍAS GYM</h1>
   <p>ALEJANDRA</p>
 </header>
+
 <nav aria-label="Navegación">
-<a href="#pagina-1">1. Inicio</a>
-<a href="#pagina-2">2. Pautas</a>
-<a href="#pagina-3">3. Planificación</a>
-<a href="#pagina-4">4. Sesión 1</a>
-<a href="#pagina-5">5. Sesión 1</a>
-<a href="#pagina-6">6. Sesión 2</a>
-<a href="#pagina-7">7. Sesión 2</a>
-<a href="#pagina-8">8. Sesión 3</a>
-<a href="#pagina-9">9. Sesión 3</a>
-<a href="#pagina-10">10. Sesión 4</a>
-<a href="#pagina-11">11. Sesión 4</a>
+  <a href="#pagina-1">1. Inicio</a>
+  <a href="#pagina-2">2. Pautas</a>
+  <a href="#pagina-3">3. Planificación</a>
+  <a href="#pagina-4">4. Sesión 1</a>
+  <a href="#pagina-5">5. Sesión 1</a>
+  <a href="#pagina-6">6. Sesión 2</a>
+  <a href="#pagina-7">7. Sesión 2</a>
+  <a href="#pagina-8">8. Sesión 3</a>
+  <a href="#pagina-9">9. Sesión 3</a>
+  <a href="#pagina-10">10. Sesión 4</a>
+  <a href="#pagina-11">11. Sesión 4</a>
 </nav>
+
 <main>
 
-    <section class="page" id="pagina-1">
-      <div class="page-number">PÁGINA 1</div>
-      <h2>4 DÍAS GYM - ALEJANDRA</h2>
-      <div class="content">
-        
-      </div>
-      <div class="images">
-              <div class="image-slot">
-                <strong>FOTO 1</strong>
-                <code>PEGA_AQUI_EL_ENLACE_DE_LA_IMAGEN</code>
-                <img src="PEGA_AQUI_EL_ENLACE_DE_LA_IMAGEN" alt="Imagen del ejercicio" onerror="this.style.display='none'">
-              </div></div>
-    </section>
-    <section class="page" id="pagina-2">
-      <div class="page-number">PÁGINA 2</div>
-      <h2>Pautas para el entrenamiento</h2>
-      <div class="content">
-        <p>1. Intenta no excederte con la intensidad, probablemente puedas más en algunos <br>ejercicios, pero no es necesario para conseguir todos los beneficios. <br>2. Si notas demasiado cansancio el cual no te permite hablar con normalidad, para unos <br>minutos hasta recuperarte. <br>3. Evita ejercicios con saltos o un gran impacto. <br>4. Si notas demasiada presión o tensión abdominal deberás disminuir la intensidad del <br>ejercicio. Si continúas con molestias consulta antes con la entrenadora. </p><p>PAUTAS PARA EL ENTRENAMIENTO: </p><p>1. Realiza ejercicios controlados con una correcta técnica. <br>2. Controla la fase excéntrica del ejercicio. Ejemplo: Cuando realizas una sentadilla <br>controla la bajada. Cuando realizas una flexión controla la bajada. <br>3. En los ejercicios de fuerza intenta no llegar al fallo técnico. Es decir, si en una serie <br>puedes hacer máximo 15 repeticiones no las hagas todas, en este caso te quedarías en <br>unas 12-13. Deja siempre 2 o 3 repeticiones en la recámara. <br>4. Recuerda siempre activar el abdomen previamente con una respiración profunda y <br>metiendo ombligo al soltar el aire por la boca </p>
-      </div>
-      <div class="images">
-      <div class="exercise-image">
-        <img src="0-0.jpg" alt="Puente de glúteo">
-      </div>
+<section class="page" id="pagina-1">
+  <div class="page-number">PÁGINA 1</div>
+  <h2>4 DÍAS GYM - ALEJANDRA</h2>
+
+  <div class="content">
+  </div>
+
+  <div class="images">
+    <img src="PEGA_AQUI_EL_ENLACE_DE_LA_IMAGEN"
+         alt="Imagen del ejercicio"
+         onerror="this.style.display='none'">
+  </div>
+</section>
+
+<section class="page" id="pagina-2">
+  <div class="page-number">PÁGINA 2</div>
+  <h2>Pautas para el entrenamiento</h2>
+
+  <div class="content">
+    <p>
+      1. Intenta no excederte con la intensidad, probablemente puedas más en algunos
+      <br>ejercicios, pero no es necesario para conseguir todos los beneficios.
+      <br>2. Si notas demasiado cansancio el cual no te permite hablar con normalidad,
+      para unos <br>minutos hasta recuperarte.
+      <br>3. Evita ejercicios con saltos o un gran impacto.
+      <br>4. Si notas demasiada presión o tensión abdominal deberás disminuir la intensidad del
+      <br>ejercicio. Si continúas con molestias consulta antes con la entrenadora.
+    </p>
+
+```
+<p>PAUTAS PARA EL ENTRENAMIENTO:</p>
+
+<p>
+  1. Realiza ejercicios controlados con una correcta técnica.
+  <br>2. Controla la fase excéntrica del ejercicio. Ejemplo: Cuando realizas una sentadilla
+  <br>controla la bajada. Cuando realizas una flexión controla la bajada.
+  <br>3. En los ejercicios de fuerza intenta no llegar al fallo técnico. Es decir, si en una serie
+  <br>puedes hacer máximo 15 repeticiones no las hagas todas, en este caso te quedarías en
+  <br>unas 12-13. Deja siempre 2 o 3 repeticiones en la recámara.
+  <br>4. Recuerda siempre activar el abdomen previamente con una respiración profunda y
+  <br>metiendo ombligo al soltar el aire por la boca
+</p>
+```
+
+  </div>
+
+  <div class="images">
+    <div class="exercise-image">
+      <img src="0-0.jpg" alt="Puente de glúteo">
     </div>
-    </section>
-    <section class="page" id="pagina-3">
-      <div class="page-number">PÁGINA 3</div>
-      <h2>Esquema de la planificación semanal</h2>
-      <div class="content">
-        
-      <div class="exercise-image">
-        <img src="plan.jpg" alt="plan">
-      </div>
+  </div>
+</section>
+
+<section class="page" id="pagina-3">
+  <div class="page-number">PÁGINA 3</div>
+  <h2>Esquema de la planificación semanal</h2>
+
+  <div class="content">
+    <div class="exercise-image">
+      <img src="plan.jpg" alt="plan">
     </div>
-        </div>
-      
-    </section>
-   <section class="page" id="pagina-4">
+  </div>
+</section>
+
+<section class="page" id="pagina-4">
   <div class="page-number">PÁGINA 4</div>
 
   <h2>Sesión 1: Piernas - Glúteo</h2>
 
   <div class="content">
 
-    <p>
-      <strong>SESIÓN 1: PIERNAS - GLÚTEO</strong><br>
-      <strong>PARTE 1. CALENTAMIENTO: MOVILIDAD CADERA / RODILLAS Y ACTIVACIÓN ABDOMINAL</strong><br>
-      REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS:<br>
-      •<br>
-      Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
-      (activando tu transverso). Para preparar y calentar el abdomen para la parte principal.<br>
-      •<br>
-      VIDEO:
-    </p>
+```
+<p>
+  <strong>SESIÓN 1: PIERNAS - GLÚTEO</strong><br>
+  <strong>PARTE 1. CALENTAMIENTO: MOVILIDAD CADERA / RODILLAS Y ACTIVACIÓN ABDOMINAL</strong><br>
+  REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS:<br>
+  •<br>
+  Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
+  (activando tu transverso). Para preparar y calentar el abdomen para la parte principal.<br>
+  •<br>
+  VIDEO:
+</p>
 
-    <p>
-      <strong>PARTE 2. PARTE PRINCIPAL (1)</strong><br>
-      PARA TODOS LOS EJERCICIOS.<br>
-      REALIZA 4 SERIES DE 10 REPETICIONES AL 65-70% DE INTENSIDAD.
-      DEJÁNDOTE 2 REPETICIONES EN RECÁMARA.
-      ENTRE CADA SERIE DESCANSA 1’ 30’’.<br>
-      ES PRIMORDIAL LA CORRECTA ACTIVACIÓN DEL TRANSVERSO Y LLEVAR UNA RESPIRACIÓN CORRECTA.
-      INHALA AL BAJAR Y EXHALA AL SUBIR.
-    </p>
+<p>
+  <strong>PARTE 2. PARTE PRINCIPAL (1)</strong><br>
+  PARA TODOS LOS EJERCICIOS.<br>
+  REALIZA 4 SERIES DE 10 REPETICIONES AL 65-70% DE INTENSIDAD.
+  DEJÁNDOTE 2 REPETICIONES EN RECÁMARA.
+  ENTRE CADA SERIE DESCANSA 1’ 30’’.<br>
+  ES PRIMORDIAL LA CORRECTA ACTIVACIÓN DEL TRANSVERSO Y LLEVAR UNA RESPIRACIÓN CORRECTA.
+  INHALA AL BAJAR Y EXHALA AL SUBIR.
+</p>
 
+<!-- EJERCICIO 1 -->
+<div class="exercise">
+  <h3>EJERCICIO 1: SENTADILLA HEXAGONAL</h3>
 
-    <!-- EJERCICIO 1 -->
-    <div class="exercise">
-      <h3>EJERCICIO 1: SENTADILLA HEXAGONAL</h3>
+  <p>
+    OPCIÓN 1: SI HAY BARRA HEXAGONAL<br>
+    OPCIÓN 2: SI NO HAY BARRA HEXAGONAL<br>
+    Utiliza 2 kettlebells laterales.
+  </p>
 
-      <p>
-        OPCIÓN 1: SI HAY BARRA HEXAGONAL<br>
-        OPCIÓN 2: SI NO HAY BARRA HEXAGONAL<br>
-        Utiliza 2 kettlebells laterales.
-      </p>
-
-      <div class="exercise-image">
-        <img src="1-1.jpg" alt="Sentadilla hexagonal">
-      </div>
-    </div>
-
-
-    <!-- EJERCICIO 2 -->
-    <div class="exercise">
-      <h3>EJERCICIO 2: ZANCADAS CON PIES ESTÁTICOS (BARRA O MANCUERNAS)</h3>
-
-      <p>
-        FLEXIONA Y EXTIENDE RODILLAS SIN MOVER LOS PIES.
-      </p>
-
-      <div class="exercise-image">
-        <img src="1-2.jpg" alt="Zancadas con pies estáticos">
-      </div>
-    </div>
-
-
-    <!-- EJERCICIO 3 -->
-    <div class="exercise">
-      <h3>EJERCICIO 3: PUENTE DE GLÚTEO CON ACTIVACIÓN DE TRANSVERSO</h3>
-
-      <p>
-        Coloca la mancuerna en la pierna, nunca en tu pubis.
-        Usa una mini band para activar más el glúteo,
-        ya que la carga no debe ser demasiado elevada.<br>
-        En el momento de subir la cadera, exhala por la boca metiendo el ombliguito.
-      </p>
-
-      <div class="exercise-image">
-        <img src="1-3.jpg" alt="Puente de glúteo">
-      </div>
-    </div>
-
-
-    <!-- EJERCICIO 4 -->
-    <div class="exercise">
-      <h3>EJERCICIO 4: EXTENSIONES DE CUÁDRICEPS</h3>
-
-      <div class="exercise-image">
-        <img src="1-4.jpg" alt="Extensiones de cuádriceps">
-      </div>
-    </div>
-
-        <!-- EJERCICIO 5-->
-    <div class="exercise">
-      <h3>EJERCICIO 5: ABDUCCIÓN EN MÁQUINA</h3>
-
-      <div class="exercise-image">
-        <img src="1-5.jpg" alt=" ABDUCCIÓN EN MÁQUINA">
-      </div>
-    </div>
-
-            <!-- EJERCICIO 6-->
-    <div class="exercise">
-      <h3>EJERCICIO 6: PATADA DE GLÚTEO</h3> <br>Apoya las manos en el soporte (dónde normalmente va tu pecho-barriguita). <br>También puedes hacerlo en polea. <br>Usa una carga que no te moleste mucho el pubis. </p>
-
-      <div class="exercise-image">
-        <img src="1-6.jpg" alt="PATADA DE GLÚTEO">
-      </div>
-    </div>
-          <div class="content">
-        <p>CARDIO: 10’ EN MÁQUINA AERÓBICA A ELEGIR (CINTA ANDANDO, BICLETA…) <br>PARTE 3: TRANSVERSO Y SUELO PÉLVICO <br>Realiza 3 series de 10 repeticiones de los siguientes dos ejercicios. Descansa 1’ entre cada <br>serie, realizando movimientos pélvicos. <br>Pull con goma <br>Contracciones isométricas <br><a href="https://youtu.be/FZORYE2qGVE?si=oOOXD" target="_blank" rel="noopener noreferrer">https://youtu.be/FZORYE2qGVE?si=oOOXD</a> <br>6C0ZtDP3k1R <br><a href="https://youtu.be/SDRkeKZkB0Y?si=aETZgDr" target="_blank" rel="noopener noreferrer">https://youtu.be/SDRkeKZkB0Y?si=aETZgDr</a> <br>rdwk3SRL0</p>
-      </div>
+  <div class="exercise-image">
+    <img src="1-1.jpg" alt="Sentadilla hexagonal">
   </div>
-</section> 
+</div>
+
+
+<!-- EJERCICIO 2 -->
+<div class="exercise">
+  <h3>EJERCICIO 2: ZANCADAS CON PIES ESTÁTICOS (BARRA O MANCUERNAS)</h3>
+
+  <p>
+    FLEXIONA Y EXTIENDE RODILLAS SIN MOVER LOS PIES.
+  </p>
+
+  <div class="exercise-image">
+    <img src="1-2.jpg" alt="Zancadas con pies estáticos">
+  </div>
+</div>
+
+
+<!-- EJERCICIO 3 -->
+<div class="exercise">
+  <h3>EJERCICIO 3: PUENTE DE GLÚTEO CON ACTIVACIÓN DE TRANSVERSO</h3>
+
+  <p>
+    Coloca la mancuerna en la pierna, nunca en tu pubis.
+    Usa una mini band para activar más el glúteo,
+    ya que la carga no debe ser demasiado elevada.<br>
+    En el momento de subir la cadera, exhala por la boca metiendo el ombliguito.
+  </p>
+
+  <div class="exercise-image">
+    <img src="1-3.jpg" alt="Puente de glúteo">
+  </div>
+</div>
+
+
+<!-- EJERCICIO 4 -->
+<div class="exercise">
+  <h3>EJERCICIO 4: EXTENSIONES DE CUÁDRICEPS</h3>
+
+  <div class="exercise-image">
+    <img src="1-4.jpg" alt="Extensiones de cuádriceps">
+  </div>
+</div>
+
+
+<!-- EJERCICIO 5 -->
+<div class="exercise">
+  <h3>EJERCICIO 5: ABDUCCIÓN EN MÁQUINA</h3>
+
+  <div class="exercise-image">
+    <img src="1-5.jpg" alt="ABDUCCIÓN EN MÁQUINA">
+  </div>
+</div>
+
+
+<!-- EJERCICIO 6 -->
+<div class="exercise">
+  <h3>EJERCICIO 6: PATADA DE GLÚTEO</h3>
+
+  <p>
+    Apoya las manos en el soporte (dónde normalmente va tu pecho-barriguita).
+    <br>También puedes hacerlo en polea.
+    <br>Usa una carga que no te moleste mucho el pubis.
+  </p>
+
+  <div class="exercise-image">
+    <img src="1-6.jpg" alt="PATADA DE GLÚTEO">
+  </div>
+</div>
+
+<div class="content">
+  <p>
+    CARDIO: 10’ EN MÁQUINA AERÓBICA A ELEGIR (CINTA ANDANDO, BICLETA…)
+    <br>PARTE 3: TRANSVERSO Y SUELO PÉLVICO
+    <br>Realiza 3 series de 10 repeticiones de los siguientes dos ejercicios.
+    Descansa 1’ entre cada <br>serie, realizando movimientos pélvicos.
+    <br>Pull con goma
+    <br>Contracciones isométricas
+    <br>
+    <a href="https://youtu.be/FZORYE2qGVE?si=oOOXD"
+       target="_blank"
+       rel="noopener noreferrer">
+      https://youtu.be/FZORYE2qGVE?si=oOOXD
+    </a>
+    <br>6C0ZtDP3k1R
+    <br>
+    <a href="https://youtu.be/SDRkeKZkB0Y?si=aETZgDr"
+       target="_blank"
+       rel="noopener noreferrer">
+      https://youtu.be/SDRkeKZkB0Y?si=aETZgDr
+    </a>
+    <br>rdwk3SRL0
+  </p>
+</div>
+```
+
+  </div>
+</section>
 
 <section class="page" id="pagina-6">
   <div class="page-number">PÁGINA 6</div>
@@ -229,417 +375,378 @@ footer { text-align:center; color:var(--muted); padding:20px; font-size:.85rem; 
 
   <div class="content">
 
-    <p>
-      SESIÓN 2: ESPALDA Y BÍCEPS <br>
-      PARTE 1. CALENTAMIENTO: MOVILIDAD Y ACTIVACIÓN ABDOMINAL <br>
-      REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS: <br>
-      • <br>
-      Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
-      (activando tu transverso). Para preparar y calentar el abdomen para la parte principal.
-    </p>
+```
+<p>
+  SESIÓN 2: ESPALDA Y BÍCEPS <br>
+  PARTE 1. CALENTAMIENTO: MOVILIDAD Y ACTIVACIÓN ABDOMINAL <br>
+  REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS: <br>
+  • <br>
+  Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
+  (activando tu transverso). Para preparar y calentar el abdomen para la parte principal.
+</p>
 
-    <p>
+<p>
+  <img src="2-0.jpg"
+       alt="Movilidad de columna"
+       onerror="this.style.display='none'">
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 11</strong>
-      <code>2-0.png</code>
-      <img src="2-0.jpg" alt="Movilidad de columna" onerror="this.style.display='none'">
-    </div>
+<p>
+  Inhala por la nariz y exhala metiendo el ombligo al hacer el esfuerzo.
+</p>
 
-   
+<p>
+  PARTE 2. PARTE PRINCIPAL (1) <br>
+  PARA TODOS LOS EJERCICIOS. <br>
+  REALIZA 4 SERIES DE 10 REPETICIONES AL 65-70% DE INTENSIDAD.
+  DEJÁNDOTE 2 REPETICIONES EN RECÁMARA. ENTRE CADA SERIE DESCANSA 1’ 30’’. <br>
+  ES PRIMORDIAL LA CORRECTA ACTIVACIÓN DEL TRANSVERSO Y LLEVAR UNA RESPIRACIÓN
+  CORRECTA. INHALA AL BAJAR Y EXHALA AL SUBIR.
+</p>
 
-    <p>
-      Inhala por la nariz y exhala metiendo el ombligo al hacer el esfuerzo.
-    </p>
+<p>
+  EJERCICIO 1: JALÓN AL PECHO UNILATERAL
+</p>
 
-    <p>
-      PARTE 2. PARTE PRINCIPAL (1) <br>
-      PARA TODOS LOS EJERCICIOS. <br>
-      REALIZA 4 SERIES DE 10 REPETICIONES AL 65-70% DE INTENSIDAD.
-      DEJÁNDOTE 2 REPETICIONES EN RECÁMARA. ENTRE CADA SERIE DESCANSA 1’ 30’’. <br>
-      ES PRIMORDIAL LA CORRECTA ACTIVACIÓN DEL TRANSVERSO Y LLEVAR UNA RESPIRACIÓN
-      CORRECTA. INHALA AL BAJAR Y EXHALA AL SUBIR.
-    </p>
+<img src="2-1.jpg"
+     alt="Jalón al pecho unilateral"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 1: JALÓN AL PECHO UNILATERAL
-    </p>
+<p>
+  EJERCICIO 2: REMO CON MANCUERNA
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 14</strong>
-      <code>2-1.jpg</code>
-      <img src="2-1.jpg" alt="Jalón al pecho unilateral" onerror="this.style.display='none'">
-    </div>
+<img src="2-2.jpg"
+     alt="Remo con mancuerna"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 2: REMO CON MANCUERNA
-    </p>
+<p>
+  EJERCICIO 3: PULL OVER EN POLEA ALTA
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 15</strong>
-      <code>2-2.jpg</code>
-      <img src="2-2.jpg" alt="Remo con mancuerna" onerror="this.style.display='none'">
-    </div>
+<img src="2-3.jpg"
+     alt="Pull over en polea alta"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 3: PULL OVER EN POLEA ALTA
-    </p>
+<p>
+  EJERCICIO 4: CURL DE BÍCEPS CON POLEA
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 16</strong>
-      <code>2-3.jpg</code>
-      <img src="2-3.jpg" alt="Pull over en polea alta" onerror="this.style.display='none'">
-    </div>
+<img src="2-4.jpg"
+     alt="Curl de bíceps con polea"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 4: CURL DE BÍCEPS CON POLEA
-    </p>
+<p>
+  EJERCICIO 5: BÍCEPS MARTILLO
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 17</strong>
-      <code>2-4.jpg</code>
-      <img src="2-4.jpg" alt="Curl de bíceps con polea" onerror="this.style.display='none'">
-    </div>
+<img src="2-5.jpg"
+     alt="Bíceps martillo"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 5: BÍCEPS MARTILLO
-    </p>
+<p>
+  CARDIO: CIRCUITO 30’’ 15’’ (3 RONDAS) <br>
+  TIMER:
+  <a href="https://youtu.be/oIm1oN-bZSM?si=ssCFB7idNCbDz8px"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/oIm1oN-bZSM?si=ssCFB7idNCbDz8px
+  </a>
+  <br>
+  KETTLEBELL SWING <br>
+  SUBIDA Y BAJADA DISCO O STEP <br>
+  DUMBELL SNATCH
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 18</strong>
-      <code>2-5.jpg</code>
-      <img src="2-5.jpg" alt="Bíceps martillo" onerror="this.style.display='none'">
-    </div>
+<img src="2-6.jpg"
+     alt="Circuito de cardio"
+     onerror="this.style.display='none'">
 
-    <p>
-      CARDIO: CIRCUITO 30’’ 15’’ (3 RONDAS) <br>
-      TIMER:
-      <a href="https://youtu.be/oIm1oN-bZSM?si=ssCFB7idNCbDz8px"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/oIm1oN-bZSM?si=ssCFB7idNCbDz8px
-      </a>
-      <br>
-      KETTLEBELL SWING <br>
-      SUBIDA Y BAJADA DISCO O STEP <br>
-      DUMBELL SNATCH
-    </p>
+<p>
+  SUELO PÉLVICO y TRANSVERSO ABDOMINAL <br>
+  REALIZA 3 SERIES DE 10 REPETICIONES DE LOS SIGUIENTES EJERCICIOS.
+  Descansa 1’ entre serie.
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 19</strong>
-      <code>2-6.jpg</code>
-      <img src="2-6.jpg" alt="Circuito de cardio" onerror="this.style.display='none'">
-    </div>
+<p>
+  PRESS PALLOF ARRIBA Y ABAJO
+</p>
 
-    <p>
-      SUELO PÉLVICO y TRANSVERSO ABDOMINAL <br>
-      REALIZA 3 SERIES DE 10 REPETICIONES DE LOS SIGUIENTES EJERCICIOS.
-      Descansa 1’ entre serie.
-    </p>
+<p>
+  ASCENSOR <br>
+  <a href="https://youtu.be/XaGU0DhEjic?si=di-"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/XaGU0DhEjic?si=di-
+  </a>
+  <br>
+  NaKUk_Sh8u2mP
+</p>
 
-    <p>
-      PRESS PALLOF ARRIBA Y ABAJO
-    </p>
-
-
-
-    <p>
-      ASCENSOR <br>
-      <a href="https://youtu.be/XaGU0DhEjic?si=di-"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/XaGU0DhEjic?si=di-
-      </a>
-      <br>
-      NaKUk_Sh8u2mP
-    </p>
-
- 
-
-    <p>
-      <a href="https://youtu.be/zJi2iYdbpdk?si=i122ZK_m"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/zJi2iYdbpdk?si=i122ZK_m
-      </a>
-      <br>
-      M2gkXzQ0
-    </p>
-
+<p>
+  <a href="https://youtu.be/zJi2iYdbpdk?si=i122ZK_m"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/zJi2iYdbpdk?si=i122ZK_m
+  </a>
+  <br>
+  M2gkXzQ0
+</p>
+```
 
   </div>
 </section>
-```
 
-
-```html
 <section class="page" id="pagina-8">
   <div class="page-number">PÁGINA 8</div>
   <h2>Sesión 3: Piernas - Glúteo</h2>
 
   <div class="content">
 
-    <p>
-      SESIÓN 3: PIERNAS-GLÚTEO <br>
-      PARTE 1. CALENTAMIENTO: MOVILIDAD Y ACTIVACIÓN ABDOMINAL <br>
-      REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS: <br>
-      • <br>
-      Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
-      (activando tu transverso). Para preparar y calentar el abdomen para la parte
-      principal. <br>
-      • <br>
-      VIDEO: MOVILIDAD (ENVIADO POR WHATSAPP)
-    </p>
+```
+<p>
+  SESIÓN 3: PIERNAS-GLÚTEO <br>
+  PARTE 1. CALENTAMIENTO: MOVILIDAD Y ACTIVACIÓN ABDOMINAL <br>
+  REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS: <br>
+  • <br>
+  Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
+  (activando tu transverso). Para preparar y calentar el abdomen para la parte
+  principal. <br>
+  • <br>
+  VIDEO: MOVILIDAD (ENVIADO POR WHATSAPP)
+</p>
 
-    <p>
-      PARTE 2. PARTE PRINCIPAL (1) <br>
-      PARA TODOS LOS EJERCICIOS. <br>
-      REALIZA 4 SERIES DE 10 REPETICIONES AL 65-70% DE INTENSIDAD. DEJÁNDOTE 2
-      REPETICIONES EN RECÁMARA. ENTRE CADA SERIE DESCANSA 1’ 30’’. <br>
-      ES PRIMORDIAL LA CORRECTA ACTIVACIÓN DEL TRANSVERSO Y LLEVAR UNA RESPIRACIÓN
-      CORRECTA. INHALA AL BAJAR Y EXHALA AL SUBIR.
-    </p>
+<p>
+  PARTE 2. PARTE PRINCIPAL (1) <br>
+  PARA TODOS LOS EJERCICIOS. <br>
+  REALIZA 4 SERIES DE 10 REPETICIONES AL 65-70% DE INTENSIDAD. DEJÁNDOTE 2
+  REPETICIONES EN RECÁMARA. ENTRE CADA SERIE DESCANSA 1’ 30’’. <br>
+  ES PRIMORDIAL LA CORRECTA ACTIVACIÓN DEL TRANSVERSO Y LLEVAR UNA RESPIRACIÓN
+  CORRECTA. INHALA AL BAJAR Y EXHALA AL SUBIR.
+</p>
 
-    <p>
-      EJERCICIO 1: SENTADILLA SUMO
-    </p>
+<p>
+  EJERCICIO 1: SENTADILLA SUMO
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 25</strong>
-      <code>3-1.jpg</code>
-      <img src="3-1.jpg" alt="Sentadilla sumo" onerror="this.style.display='none'">
-    </div>
+<img src="3-1.jpg"
+     alt="Sentadilla sumo"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 2: ZANCADAS LATERALES CON PIES ESTÁTICOS
-      (FLEXIONA Y EXTIENDE RODILLA SIN MOVER LOS PIES).
-    </p>
+<p>
+  EJERCICIO 2: ZANCADAS LATERALES CON PIES ESTÁTICOS
+  (FLEXIONA Y EXTIENDE RODILLA SIN MOVER LOS PIES).
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 26</strong>
-      <code>3-2.jpg</code>
-      <img src="3-2.jpg" alt="Zancadas laterales con pies estáticos" onerror="this.style.display='none'">
-    </div>
+<img src="3-2.jpg"
+     alt="Zancadas laterales con pies estáticos"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 3: PULL EN POLEA
-    </p>
+<p>
+  EJERCICIO 3: PULL EN POLEA
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 27</strong>
-      <code>3-3.jpg</code>
-      <img src="3-3.jpg" alt="Pull en polea" onerror="this.style.display='none'">
-    </div>
+<img src="3-3.jpg"
+     alt="Pull en polea"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 5: FEMORALES SENTADA EN MÁQUINA
-    </p>
+<p>
+  EJERCICIO 5: FEMORALES SENTADA EN MÁQUINA
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 28</strong>
-      <code>3-4.jpg</code>
-      <img src="3-4.jpg" alt="Femorales sentada en máquina" onerror="this.style.display='none'">
-    </div>
+<img src="3-4.jpg"
+     alt="Femorales sentada en máquina"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 6: ADUCTOR EN POLEA O MÁQUINA (según molestia pubalgia)
-    </p>
+<p>
+  EJERCICIO 6: ADUCTOR EN POLEA O MÁQUINA (según molestia pubalgia)
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 29</strong>
-      <code>3-5.jpg</code>
-      <img src="3-5.jpg" alt="Aductor en polea o máquina" onerror="this.style.display='none'">
-    </div>
+<img src="3-5.jpg"
+     alt="Aductor en polea o máquina"
+     onerror="this.style.display='none'">
 
-    <p>
-      CARDIO: AMRAP: 7 minutos <br>
-      Realiza el mayor nº de vueltas que puedas de los siguientes ejercicios:
-    </p>
+<p>
+  CARDIO: AMRAP: 7 minutos <br>
+  Realiza el mayor nº de vueltas que puedas de los siguientes ejercicios:
+</p>
 
-    <p>
-      10 ground to over head con disco de 5kg: <br>
-      <a href="https://youtu.be/z0N25y8FEJ4?si=VbjQ4OUIqU55ws0t"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/z0N25y8FEJ4?si=VbjQ4OUIqU55ws0t
-      </a>
-    </p>
+<p>
+  10 ground to over head con disco de 5kg: <br>
+  <a href="https://youtu.be/z0N25y8FEJ4?si=VbjQ4OUIqU55ws0t"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/z0N25y8FEJ4?si=VbjQ4OUIqU55ws0t
+  </a>
+</p>
 
-    <p>
-      15 sentadillas acabando de puntillas (adaptación a la sentadilla salto): <br>
-      <a href="https://youtube.com/shorts/El8WAR2liMU?si=2xOyPXM1RI6K4tf0"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtube.com/shorts/El8WAR2liMU?si=2xOyPXM1RI6K4tf0
-      </a>
-    </p>
+<p>
+  15 sentadillas acabando de puntillas (adaptación a la sentadilla salto): <br>
+  <a href="https://youtube.com/shorts/El8WAR2liMU?si=2xOyPXM1RI6K4tf0"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtube.com/shorts/El8WAR2liMU?si=2xOyPXM1RI6K4tf0
+  </a>
+</p>
 
-    <p>
-      12 jumping jacks con tracción y empuje: Opción 2 sin salto <br>
-      <a href="https://youtube.com/shorts/-D1PoqZz6nk?si=4jdNyk8mKIMUSl81"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtube.com/shorts/-D1PoqZz6nk?si=4jdNyk8mKIMUSl81
-      </a>
-    </p>
+<p>
+  12 jumping jacks con tracción y empuje: Opción 2 sin salto <br>
+  <a href="https://youtube.com/shorts/-D1PoqZz6nk?si=4jdNyk8mKIMUSl81"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtube.com/shorts/-D1PoqZz6nk?si=4jdNyk8mKIMUSl81
+  </a>
+</p>
 
-    <p>
-      TRANSVERSO ABDOMINAL Y SUELO PÉLVICO <br>
-      3 RONDAS DE 30’’ DE TRABAJO Y 15’’ DE DESCANSO. ENTRE SERIE DESCANSA 1’. <br>
-      PLANCHA MANOS EN ALTURA (30’’) <br>
-      ELEVACIÓN DE PIERNA EN CUADRUPEDIA <br>
-      <a href="https://youtu.be/EmIf9-"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/EmIf9-
-      </a><br>
-      Q1pTs?si=BRQGErbxvJVKq50N <br>
-      <a href="https://youtu.be/1w51mYQDS8I?si=jVILT0Y"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/1w51mYQDS8I?si=jVILT0Y
-      </a> <br>
-      dIr56voOL
-    </p>
+<p>
+  TRANSVERSO ABDOMINAL Y SUELO PÉLVICO <br>
+  3 RONDAS DE 30’’ DE TRABAJO Y 15’’ DE DESCANSO. ENTRE SERIE DESCANSA 1’. <br>
+  PLANCHA MANOS EN ALTURA (30’’) <br>
+  ELEVACIÓN DE PIERNA EN CUADRUPEDIA <br>
+  <a href="https://youtu.be/EmIf9-"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/EmIf9-
+  </a><br>
+  Q1pTs?si=BRQGErbxvJVKq50N <br>
+  <a href="https://youtu.be/1w51mYQDS8I?si=jVILT0Y"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/1w51mYQDS8I?si=jVILT0Y
+  </a> <br>
+  dIr56voOL
+</p>
+```
 
   </div>
 </section>
-```
 
-```html
 <section class="page" id="pagina-10">
   <div class="page-number">PÁGINA 10</div>
   <h2>Sesión 4: Pectoral, Hombros y Tríceps</h2>
 
   <div class="content">
 
-    <p>
-      SESIÓN 4: PECTORAL, HOMBROS Y TRÍCEPS. <br>
-      PARTE 1. CALENTAMIENTO: MOVILIDAD Y ACTIVACIÓN ABDOMINAL <br>
-      REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS. <br>
-      • <br>
-      Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
-      (activando tu transverso). Para preparar y calentar el abdomen para la parte principal.
-    </p>
+```
+<p>
+  SESIÓN 4: PECTORAL, HOMBROS Y TRÍCEPS. <br>
+  PARTE 1. CALENTAMIENTO: MOVILIDAD Y ACTIVACIÓN ABDOMINAL <br>
+  REALIZA 2 SERIES DE 10 REPETICIONES DE CADA UNO DE ESTOS EJERCICIOS. <br>
+  • <br>
+  Al mismo tiempo que realizas el ejercicio, inspira por la nariz y exhala por la boca
+  (activando tu transverso). Para preparar y calentar el abdomen para la parte principal.
+</p>
 
-    <p>
-      EJERCICIO 1
-    </p>
+<p>
+  EJERCICIO 1
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 32</strong>
-      <code>4-0.jpg</code>
-      <img src="4-0.jpg" alt="Ejercicio 1 de calentamiento" onerror="this.style.display='none'">
-    </div>
+<img src="4-0.jpg"
+     alt="Ejercicio 1 de calentamiento"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 2
-    </p>
+<p>
+  EJERCICIO 2
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 33</strong>
-      <code>4-1.jpg</code>
-      <img src="4-1.jpg" alt="Ejercicio 2 de calentamiento" onerror="this.style.display='none'">
-    </div>
+<img src="4-1.jpg"
+     alt="Ejercicio 2 de calentamiento"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 3
-    </p>
+<p>
+  EJERCICIO 3
+</p>
 
-    <p>
-      Si no hay goma larga, usa la polea. <br>
-      <a href="https://youtu.be/CIH_3tRCF"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/CIH_3tRCF
-      </a> <br>
-      vg?si=KQ3KyVk_6NqJ0oaf
-    </p>
+<p>
+  Si no hay goma larga, usa la polea. <br>
+  <a href="https://youtu.be/CIH_3tRCF"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/CIH_3tRCF
+  </a> <br>
+  vg?si=KQ3KyVk_6NqJ0oaf
+</p>
 
-    <p>
-      PARTE 2. PARTE PRINCIPAL (1) <br>
-      REALIZA 4 SERIES DE 10 REPETICIONES. DESCANSA 1’ ENTRE SERIE. <br>
-      ACTIVA MUY BIEN TU ABDOMEN Y CONCÉNTRATE EN LA FASE DE MAYOR ESFUERZO.
-    </p>
+<p>
+  PARTE 2. PARTE PRINCIPAL (1) <br>
+  REALIZA 4 SERIES DE 10 REPETICIONES. DESCANSA 1’ ENTRE SERIE. <br>
+  ACTIVA MUY BIEN TU ABDOMEN Y CONCÉNTRATE EN LA FASE DE MAYOR ESFUERZO.
+</p>
 
-    <p>
-      EJERCICIO 1: EMPUJE EN MÁQUINA
-    </p>
+<p>
+  EJERCICIO 1: EMPUJE EN MÁQUINA
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 35</strong>
-      <code>4-2.jpg</code>
-      <img src="4-2.jpg" alt="Empuje en máquina" onerror="this.style.display='none'">
-    </div>
+<img src="4-2.jpg"
+     alt="Empuje en máquina"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 2: FLEXIONES ADAPTADAS (MANOS EN ALTURA)
-    </p>
+<p>
+  EJERCICIO 2: FLEXIONES ADAPTADAS (MANOS EN ALTURA)
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 36</strong>
-      <code>4-3.jpg</code>
-      <img src="4-3.jpg" alt="Flexiones adaptadas con manos en altura" onerror="this.style.display='none'">
-    </div>
+<img src="4-3.jpg"
+     alt="Flexiones adaptadas con manos en altura"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 3: PRESS MILITAR EN MÁQUINA O MANCUERNAS
-    </p>
+<p>
+  EJERCICIO 3: PRESS MILITAR EN MÁQUINA O MANCUERNAS
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 37</strong>
-      <code>4-4.jpg</code>
-      <img src="4-4.jpg" alt="Press militar en máquina o mancuernas" onerror="this.style.display='none'">
-    </div>
+<img src="4-4.jpg"
+     alt="Press militar en máquina o mancuernas"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 4: EXTENSIONES DE TRÍCEPS EN POLEA
-    </p>
+<p>
+  EJERCICIO 4: EXTENSIONES DE TRÍCEPS EN POLEA
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 38</strong>
-      <code>4-5.jpg</code>
-      <img src="4-5.jpg" alt="Extensiones de tríceps en polea" onerror="this.style.display='none'">
-    </div>
+<img src="4-5.jpg"
+     alt="Extensiones de tríceps en polea"
+     onerror="this.style.display='none'">
 
-    <p>
-      EJERCICIO 5 Y 6: BISERIE
-      (ELEVACIONES DE HOMBROS FRONTALES Y HORIZONTALES)
-    </p>
+<p>
+  EJERCICIO 5 Y 6: BISERIE
+  (ELEVACIONES DE HOMBROS FRONTALES Y HORIZONTALES)
+</p>
 
-    <div class="image-slot">
-      <strong>FOTO 39</strong>
-      <code>4-6.jpg</code>
-      <img src="4-6.jpg" alt="Elevaciones de hombros frontales" onerror="this.style.display='none'">
-    </div>
+<img src="4-6.jpg"
+     alt="Elevaciones de hombros frontales"
+     onerror="this.style.display='none'">
 
+<p>
+  CARDIO/ ABDOMINALES: REALIZA UN TABATA DE 20’’ DE TRABAJO Y 10’’ DE DESCANSO
+  DE LOS SIGUIENTES EJERCICIOS: <br>
+  TIMER: <br>
+  BURPEES EN ALTURA <br>
+  ABDOMEN EN BANCO <br>
 
-    <p>
-      CARDIO/ ABDOMINALES: REALIZA UN TABATA DE 20’’ DE TRABAJO Y 10’’ DE DESCANSO
-      DE LOS SIGUIENTES EJERCICIOS: <br>
-      TIMER: <br>
-      BURPEES EN ALTURA <br>
-      ABDOMEN EN BANCO <br>
-      <a href="https://youtube.com/shorts/X1gR7ykt2_I?s"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtube.com/shorts/X1gR7ykt2_I?s
-      </a> <br>
-      i=1aicd9lGT4fdUd9w <br>
-      <a href="https://youtu.be/vpgIp8cD5os?si=0JHk4Y6"
-         target="_blank"
-         rel="noopener noreferrer">
-        https://youtu.be/vpgIp8cD5os?si=0JHk4Y6
-      </a> <br>
-      1SEyvA1v6
-    </p>
+  <a href="https://youtube.com/shorts/X1gR7ykt2_I?s"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtube.com/shorts/X1gR7ykt2_I?s
+  </a>
+  <br>
+  i=1aicd9lGT4fdUd9w <br>
 
+  <a href="https://youtu.be/vpgIp8cD5os?si=0JHk4Y6"
+     target="_blank"
+     rel="noopener noreferrer">
+    https://youtu.be/vpgIp8cD5os?si=0JHk4Y6
+  </a>
+  <br>
+  1SEyvA1v6
+</p>
+```
 
   </div>
 </section>
-```
 
 </main>
-<footer>Plan de entrenamiento · Versión HTML para GitHub Pages</footer>
+
+<footer>
+  Plan de entrenamiento · Versión HTML para GitHub Pages
+</footer>
+
 </body>
 </html>
